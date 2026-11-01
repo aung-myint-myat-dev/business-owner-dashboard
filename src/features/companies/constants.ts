@@ -1,0 +1,79 @@
+
+export const COMPANIES = [
+  {
+    id: 1,
+    name: "Company Litd",
+    email: "company@gmail.com",
+    address: "123/23 Main Street, Yangon",
+    phone: "099909989899",
+  },
+  {
+    id: 2,
+    name: "Global Tech Co., Ltd",
+    email: "globaltech@gmail.com",
+    address: "45 Pyay Road, Yangon",
+    phone: "099876543210",
+  },
+  {
+    id: 3,
+    name: "Golden Star Co., Ltd",
+    email: "goldenstar@gmail.com",
+    address: "78 Bogyoke Road, Mandalay",
+    phone: "09456789123",
+  },
+  {
+    id: 4,
+    name: "Green Life Trading",
+    email: "greenlife@gmail.com",
+    address: "12 Insein Road, Yangon",
+    phone: "099123456789",
+  },
+  {
+    id: 5,
+    name: "Bright Future Co., Ltd",
+    email: "brightfuture@gmail.com",
+    address: "56 University Avenue, Yangon",
+    phone: "097654321098",
+  },
+  {
+    id: 6,
+    name: "Myanmar Star Trading",
+    email: "myanmarstar@gmail.com",
+    address: "89 Strand Road, Yangon",
+    phone: "094321098765",
+  },
+  {
+    id: 7,
+    name: "Royal Business Group",
+    email: "royalbusiness@gmail.com",
+    address: "34 Zay Cho Street, Mandalay",
+    phone: "099555666777",
+  },
+  {
+    id: 8,
+    name: "Sunshine International",
+    email: "sunshine@gmail.com",
+    address: "67 Hledan Road, Yangon",
+    phone: "09777888999",
+  },
+  {
+    id: 9,
+    name: "Ocean Blue Co., Ltd",
+    email: "oceanblue@gmail.com",
+    address: "21 Merchant Road, Yangon",
+    phone: "09444455566",
+  },
+  {
+    id: 10,
+    name: "Evergreen Trading",
+    email: "evergreen@gmail.com",
+    address: "90 Chan Aye Tharzan, Mandalay",
+    phone: "099222333444",
+  },
+];
+
+export const ROUTES = {
+  INDEX: "/ophir/companies",
+  CREATE: "/ophir/companies/create",
+  EDIT: "/ophir/companies/:id/edit",
+};
