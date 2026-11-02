@@ -13,7 +13,7 @@ export default function PackageGroup({ product_id }) {
   return (
     <section className="overflow-hidden rounded-xl border shadow-xs bg-card">
       {/* Product Header */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b bg-muted/50 px-4 py-3">
+      <div className="flex flex-wrap items-center justify-between gap-3 px-4 pt-4">
         <div className="flex min-w-0 items-center gap-3">
           <Box className="size-5 shrink-0 text-muted-foreground" />
 

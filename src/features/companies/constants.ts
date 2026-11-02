@@ -71,9 +71,3 @@ export const COMPANIES = [
     phone: "099222333444",
   },
 ];
-
-export const ROUTES = {
-  INDEX: "/ophir/companies",
-  CREATE: "/ophir/companies/create",
-  EDIT: "/ophir/companies/:id/edit",
-};

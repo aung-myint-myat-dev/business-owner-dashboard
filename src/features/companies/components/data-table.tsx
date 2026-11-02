@@ -7,7 +7,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Eye, Pencil, Trash2 } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Ellipsis, Eye, Pencil, Trash2 } from "lucide-react"
 export default function CompanyDataTable({ companies = [] }) {
   return (
     <>
@@ -31,17 +39,40 @@ export default function CompanyDataTable({ companies = [] }) {
               <TableCell>{com.address}</TableCell>
               <TableCell>{com.phone}</TableCell>
               <TableCell className="flex items-center justify-center gap-1.5">
-                <Button variant="outline" size="sm">
-                  <Pencil />
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger
+                    render={
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="size-8 shrink-0 rounded-full"
+                      >
+                        <Ellipsis size={18} />
+                      </Button>
+                    }
+                  />
 
-                <Button variant="outline" size="sm">
-                  <Eye />
-                </Button>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuGroup>
+                      <DropdownMenuLabel>Actions</DropdownMenuLabel>
 
-                <Button variant="destructive" size="sm">
-                  <Trash2 />
-                </Button>
+                      <DropdownMenuItem>
+                        <Eye size={14} />
+                        Detail
+                      </DropdownMenuItem>
+
+                      <DropdownMenuItem>
+                        <Pencil size={14} />
+                        Edit
+                      </DropdownMenuItem>
+
+                      <DropdownMenuItem variant="destructive">
+                        <Trash2 size={14} />
+                        Delete
+                      </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </TableCell>
 
             </TableRow>

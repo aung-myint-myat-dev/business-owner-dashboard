@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input"
 import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
 import { Textarea } from "@/components/ui/textarea"
 import { Plus, User } from "lucide-react"
+import { COMPANIES } from "../companies/constants"
 
 export function UserActionFormDialog() {
   return (
@@ -44,6 +45,17 @@ export function UserActionFormDialog() {
           <FieldGroup>
             <FieldSet>
               <FieldGroup>
+                <Field>
+                  <FieldLabel>
+                    Company Name
+                  </FieldLabel>
+                  <NativeSelect>
+                    <NativeSelectOption value="" disabled>Select a company</NativeSelectOption>
+                    {COMPANIES.map((c) => (
+                      <NativeSelectOption key={c.id} value={c.id}>{c.name}</NativeSelectOption>
+                    ))}
+                  </NativeSelect>
+                </Field>
                 <Field>
                   <FieldLabel htmlFor="name-input-0090">
                     Name

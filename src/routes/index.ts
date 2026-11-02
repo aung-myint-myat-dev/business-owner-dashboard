@@ -8,6 +8,8 @@ import AppLayout from "@/layouts/AppLayout";
 import { createBrowserRouter } from "react-router-dom";
 import { companies } from "./companies";
 import { products } from "./products";
+import { modules } from "./modules";
+import { subscriptions } from "./subscriptions";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +26,8 @@ export const router = createBrowserRouter([
       { index: true, Component: Dashboard },
       companies,
       products,
+      modules,
+      subscriptions,
       { path: 'packages', Component: Packages },
       { path: 'plans', Component: Plans },
       { path: 'branches', Component: Branches },

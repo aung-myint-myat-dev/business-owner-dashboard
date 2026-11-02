@@ -23,7 +23,7 @@ type NavGroupProps = {
 export function NavGroup({ title, children }: NavGroupProps) {
   const location = useLocation()
   return (
-    <SidebarGroup>
+    <SidebarGroup className="border-b">
       <SidebarGroupLabel>{title}</SidebarGroupLabel>
       <SidebarMenu>
         {children.map((item) => {
@@ -34,9 +34,13 @@ export function NavGroup({ title, children }: NavGroupProps) {
                 render={<Link to={item.url} />}
                 tooltip={item.label}
                 isActive={isActive}
+                // className={`${isActive
+                //   ? "!bg-primary !text-white hover:!bg-blue-500"
+                //   : "hover:!bg-green-50 hover:!text-primary/50"
+                //   }`}
                 className={`${isActive
-                  ? "!bg-green-600 !text-white hover:!bg-green-700"
-                  : "hover:!bg-green-50 hover:!text-green-700"
+                    ? "!bg-primary !text-white hover:!bg-primary"
+                    : "hover:!bg-accent hover:!text-accent-foreground"
                   }`}
               >
                 {item.icon && <item.icon />}
