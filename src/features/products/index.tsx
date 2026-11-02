@@ -29,9 +29,9 @@ export default function Products() {
       />
 
       {/* Action Row */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-4">
         {/* Search Input */}
-        <InputGroup className="w-full max-w-sm">
+        <InputGroup className="w-full max-w-max">
           <InputGroupInput placeholder="Search by name ..." />
           <InputGroupAddon>
             <Search />
@@ -44,7 +44,7 @@ export default function Products() {
 
       <div className="grid grid-cols-12 gap-4">
         {PRODUCTS.map((p, id) => (
-          <ProductCard className="col-span-4" key={id} product={p} />
+          <ProductCard className="col-span-12 lg:col-span-6 xl:col-span-4" key={id} product={p} />
         ))}
       </div>
     </>
