@@ -14,7 +14,6 @@ import { subscriptions } from "./subscriptions";
 export const router = createBrowserRouter([
   {
     path: '/',
-    Component: AppLayout,
     children: [
       { index: true, Component: App }
     ]
