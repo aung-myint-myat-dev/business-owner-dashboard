@@ -1,0 +1,18 @@
+import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function CompanyCard({ company }) {
+  return (
+    <Link to="/ophir" className="block border shadow-sm active:shadow-md transition-shadow p-4 rounded-xl space-y-4 select-none">
+      {/* Company Name */}
+      <h2 className="text-base font-semibold tracking-tight">{company.name}</h2>
+
+      {/* Company Info */}
+      <ul className="text-sm text-muted-foreground space-y-1.5">
+        <li className="flex items-center gap-2.5"><Phone size={14} /> {company.phone}</li>
+        <li className="flex items-center gap-2.5"><Mail size={14} /> {company.email}</li>
+        <li className="flex items-center gap-2.5"><MapPin size={14} /> {company.address}</li>
+      </ul>
+    </Link>
+  )
+}

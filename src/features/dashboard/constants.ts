@@ -25,6 +25,9 @@ export const YEARLY_NEW_REGISTER_COMPANIES_CHART = [
 import { COMPANY_ROUTES } from "@/routes/companies";
 import { SUBSCRIPTION_ROUTES } from "@/routes/subscriptions";
 import { Building2, Calendar, Package, Users2, TrendingUp } from "lucide-react"
+import { MODULES } from "../modules/constants";
+import { PLANS } from "../plans/constants";
+import { PRODUCTS } from "../products/constants";
 
 export const STATS = [
   {
@@ -64,20 +67,25 @@ export const STATS = [
 export const SUB_STATS = [
   {
     title: "Total Module",
-    value: 24,
+    value: MODULES.length,
     url: "/ophir/products",
     isFinance: false,
   },
   {
     title: "Total Plan",
-    value: 8,
+    value: PLANS.length,
     url: "/ophir/plans",
     isFinance: false,
   },
+  // {
+  //   title: "Avenue",
+  //   value: 1500000,
+  //   isFinance: true,
+  // },
   {
-    title: "Avenue",
-    value: 1500000,
-    isFinance: true,
+    title: "Total Products",
+    value: PRODUCTS.length,
+    isFinite: false,
   },
   {
     title: "Total Expense",

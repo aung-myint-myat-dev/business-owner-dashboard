@@ -31,7 +31,6 @@ import { PRODUCT_STATUS_COLOR_CLASS } from "../constants";
 
 export default function ProductCard({ product, className = "" }) {
   const status = product.status ?? "production";
-
   return (
     <div
       className={cn(
@@ -57,7 +56,7 @@ export default function ProductCard({ product, className = "" }) {
       </div>
 
       {/* Card Body */}
-      <div className="mt-4 space-y-2">
+      <div className="mt-2.5 space-y-2">
         <h2 className="line-clamp-1 text-base font-semibold tracking-tight">
           {product.name}
         </h2>
@@ -68,7 +67,7 @@ export default function ProductCard({ product, className = "" }) {
       </div>
 
       {/* Card Footer */}
-      <div className="mt-auto flex items-center justify-between gap-3 pt-5">
+      <div className="mt-auto flex items-center justify-between gap-3 pt-2.5">
         {/* Statistics */}
         <div className="flex min-w-0 items-center gap-4">
           {/* Users Count */}

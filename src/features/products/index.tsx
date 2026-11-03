@@ -1,12 +1,10 @@
-import { Button } from "@/components/ui/button"
-import { Box, Plus, Search } from "lucide-react"
+import { Box, Search } from "lucide-react"
 import PageHeader from "@/components/app/page-header"
 import ProductCard from "./components/product-card"
-import { PRODUCTS, ROUTES } from "./constants"
+import { PRODUCTS } from "./constants"
 import { useBreadcrumb } from "@/hooks/use-breadcrumb"
 import { useEffect } from "react"
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group"
-import { Link } from "react-router-dom"
 import { ProductActionFormDialog } from "./action-form-dialog"
 
 export default function Products() {
@@ -29,9 +27,9 @@ export default function Products() {
       />
 
       {/* Action Row */}
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4">
         {/* Search Input */}
-        <InputGroup className="w-full max-w-max">
+        <InputGroup className="bg-card w-full md:max-w-sm">
           <InputGroupInput placeholder="Search by name ..." />
           <InputGroupAddon>
             <Search />
@@ -39,7 +37,9 @@ export default function Products() {
         </InputGroup>
 
         {/* New Package Button */}
-        <ProductActionFormDialog />
+        <div className="self-end">
+          <ProductActionFormDialog />
+        </div>
       </div>
 
       <div className="grid grid-cols-12 gap-4">

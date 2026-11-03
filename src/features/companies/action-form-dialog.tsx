@@ -3,10 +3,8 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field"
@@ -19,7 +17,7 @@ export function CompanyActionFormDialog() {
     <Dialog>
       <form>
         <DialogTrigger render={<Button><Plus /> New Company</Button>} />
-        <DialogContent className="sm:max-w-md" showCloseButton={false}>
+        <DialogContent className="sm:max-w-lg" showCloseButton={false}>
           <DialogHeader>
             <div className="flex items-center gap-3">
               {/* Icon */}

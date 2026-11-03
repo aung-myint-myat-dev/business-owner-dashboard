@@ -1,8 +1,8 @@
-import ComingSoon from "@/components/coming-soon";
+import Modules from "@/features/modules";
 
 export const modules = {
   path: 'modules',
   children: [
-    { index: true, Component: ComingSoon },
+    { index: true, Component: Modules },
   ]
 }
