@@ -61,9 +61,9 @@ export default function ProductCard({ product, className = "" }) {
           {product.name}
         </h2>
 
-        <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+        {/* <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
           {product.description}
-        </p>
+        </p> */}
       </div>
 
       {/* Card Footer */}

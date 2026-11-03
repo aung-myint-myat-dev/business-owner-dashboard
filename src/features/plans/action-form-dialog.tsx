@@ -53,16 +53,6 @@ export function PlanActionFormDialog() {
                     required
                   />
                 </Field>
-                <Field>
-                  <FieldLabel htmlFor="plan-description-textarea-00112">
-                    Plan Description
-                  </FieldLabel>
-                  <Textarea
-                    id="plan-description-textarea-00112"
-                    placeholder="Samll introduction of your plan."
-                    className="resize-none"
-                  />
-                </Field>
               </FieldGroup>
             </FieldSet>
           </FieldGroup>

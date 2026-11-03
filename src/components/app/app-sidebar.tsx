@@ -17,15 +17,15 @@ export default function AppSidebar() {
       children: [
         { label: "Companies", url: "/ophir/companies", icon: Building2 },
         { label: "Users", url: "/ophir/users", icon: Users2 },
-        { label: "Products", url: "/ophir/products", icon: Box },
-        { label: "Modules", url: "/ophir/modules", icon: Component },
       ]
     },
     {
-      title: "Subscription Management",
+      title: "Resources Management",
       children: [
+        { label: "Products", url: "/ophir/products", icon: Box },
+        { label: "Modules & Plans", url: "/ophir/modules", icon: Component },
         { label: "Packages", url: "/ophir/packages", icon: Package },
-        { label: "Plans", url: "/ophir/plans", icon: CreditCard },
+        // { label: "Plans", url: "/ophir/plans", icon: CreditCard },
       ]
     }
   ]

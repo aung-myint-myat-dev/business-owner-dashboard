@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Badge, Mail, MapPin, Phone, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function UserCard({ user }) {
@@ -9,9 +9,9 @@ export default function UserCard({ user }) {
 
       {/* Company Info */}
       <ul className="text-sm text-muted-foreground space-y-1.5">
-        <li className="flex items-center gap-2.5"><Phone size={14} /> {user.username}</li>
+        <li className="flex items-center gap-2.5"><User size={14} /> {user.username}</li>
         <li className="flex items-center gap-2.5"><Mail size={14} /> {user.email}</li>
-        <li className="flex items-center gap-2.5"><MapPin size={14} /> {user.status}</li>
+        <li className="flex items-center gap-2.5 capitalize"><Badge size={14} /> {user.status}</li>
       </ul>
     </Link>
   )

@@ -31,24 +31,22 @@ import { PRODUCTS } from "../products/constants";
 
 export const STATS = [
   {
-    title: "This Month",
-    label: "Companies",
-    value: 28,
-    icon: Building2,
-    url: COMPANY_ROUTES.CURRENT_MONTH_COMPANIES,
-  },
-  {
-    title: "This Year",
-    label: "Companies",
-    value: 285,
-    icon: Calendar,
-    url: COMPANY_ROUTES.CURRENT_YEAR_COMPANIES,
-  },
-  {
     title: "Total Companies",
     value: 245,
     icon: Package,
     url: COMPANY_ROUTES.INDEX,
+  },
+  {
+    title: "Total Products",
+    value: PRODUCTS.length,
+    url: "/ophir/products",
+    isFinance: false,
+  },
+  {
+    title: "Total Modules",
+    value: MODULES.length,
+    url: "/ophir/products",
+    isFinance: false,
   },
   {
     title: "Expiring Subscriptions",
@@ -65,27 +63,16 @@ export const STATS = [
 ]
 
 export const SUB_STATS = [
-  {
-    title: "Total Module",
-    value: MODULES.length,
-    url: "/ophir/products",
-    isFinance: false,
-  },
-  {
-    title: "Total Plan",
+    {
+    title: "Total Plans",
     value: PLANS.length,
     url: "/ophir/plans",
     isFinance: false,
   },
-  // {
-  //   title: "Avenue",
-  //   value: 1500000,
-  //   isFinance: true,
-  // },
   {
-    title: "Total Products",
-    value: PRODUCTS.length,
-    isFinite: false,
+    title: "Avenue",
+    value: 18999900,
+    isFinance: true,
   },
   {
     title: "Total Expense",

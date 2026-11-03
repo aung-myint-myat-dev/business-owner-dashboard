@@ -24,22 +24,25 @@ export default function Dashboard() {
           <Stat
             key={stat.title}
             title={stat.title}
-            label={stat.label}
             value={stat.value}
             icon={stat.icon}
             url={stat.url ?? ''}
           />
-
         ))}
+      </div>
 
+      {/* Sub Stat */}
+      <div className="grid auto-rows-min gap-4 grid-cols-12">
         {SUB_STATS.map((subStat) => (
-          <Stat
-            key={subStat.title}
-            title={subStat.title}
-            value={subStat.value}
-            url={subStat.url}
-            isFinance={subStat.isFinance}
-          />
+          <div className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3">
+            <Stat
+              key={subStat.title}
+              title={subStat.title}
+              value={subStat.value}
+              isFinance={subStat.isFinance}
+            />
+
+          </div>
         ))}
       </div>
 

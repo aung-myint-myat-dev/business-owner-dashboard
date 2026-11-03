@@ -12,8 +12,20 @@ import { Field, FieldDescription, FieldGroup, FieldLabel, FieldLegend, FieldSet 
 import { Input } from "@/components/ui/input"
 import { PRODUCTS } from "@/features/products/constants"
 import { Component, Plus } from "lucide-react"
+import ColorPicker from "./components/color-picker"
+import { useMemo, useState } from "react"
+import { MODULE_CARD_ICON_BG_CLASSE_NAMES, MODULE_CARD_ICON_BG_CLASSES } from "./constants"
 
 export function ModuleActionFormDialog() {
+  const [selectedColor, setSelectedColor] = useState('default')
+
+  const previewColorClassName = useMemo(() => {
+    return MODULE_CARD_ICON_BG_CLASSE_NAMES.find((c) => c.name === selectedColor)?.className ?? ''
+  }, [selectedColor])
+
+  const onColorSelect = (name) => {
+    setSelectedColor(name);
+  }
   return (
     <Dialog>
       <form>
@@ -22,8 +34,8 @@ export function ModuleActionFormDialog() {
           <DialogHeader>
             <div className="flex items-center gap-3">
               {/* Icon */}
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted">
-                <Component size={20} className="text-muted-foreground" />
+              <div className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${previewColorClassName}`}>
+                <Component size={20} />
               </div>
 
               {/* Text */}
@@ -61,11 +73,19 @@ export function ModuleActionFormDialog() {
               <FieldGroup className="grid grid-cols-12">
                 {PRODUCTS.map((p) => (
                   <Field orientation="horizontal" key={p.id} className="col-span-12 sm:col-span-6">
-                    <Checkbox id={`product-${p.id}`} name="product_ids"/>
+                    <Checkbox id={`product-${p.id}`} name="product_ids" />
                     <FieldLabel htmlFor={`product-${p.id}`}>{p.name}</FieldLabel>
                   </Field>
                 ))}
 
+              </FieldGroup>
+            </FieldSet>
+
+            <FieldSet>
+              <FieldLegend>Choose color</FieldLegend>
+              <FieldDescription>Color that represent your module group.</FieldDescription>
+              <FieldGroup>
+                <ColorPicker onChange={onColorSelect} value={selectedColor}/>
               </FieldGroup>
             </FieldSet>
           </FieldGroup>
@@ -78,4 +98,3 @@ export function ModuleActionFormDialog() {
     </Dialog>
   )
 }
- 

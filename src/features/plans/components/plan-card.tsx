@@ -14,7 +14,6 @@ export default function PlanCard({ plan, className = '' }) {
       {/* Title & Description */}
       <div className="flex-1">
         <h2 className="text-base font-semibold">{plan.name}</h2>
-        <p className="text-sm text-muted-foreground line-clamp-1">{plan.description}</p>
       </div>
 
       {/* Action Dropdown */}

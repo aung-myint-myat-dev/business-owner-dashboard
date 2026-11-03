@@ -33,6 +33,18 @@ export default function ModuleCard({
   className,
 }) {
 
+  const iconBgColors = {
+    blue: "bg-blue-100 text-blue-600",
+    violet: "bg-violet-100 text-violet-600",
+    yellow: "bg-yellow-100 text-yellow-600",
+    green: "bg-green-100 text-green-600",
+    pink: "bg-pink-100 text-pink-600",
+    red: "bg-red -100 text-red-600",
+    orange: "bg-orange-100 text-orange-600",
+  };
+
+  const iconBgColor = iconBgColors[module.color] ?? "bg-muted text-muted-foreground";
+
   return (
     <div
       className={cn(
@@ -42,8 +54,8 @@ export default function ModuleCard({
     >
       {/* Header */}
       <div className="flex items-center gap-3">
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted">
-          <Component size={20} className="text-muted-foreground" />
+        <div className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${iconBgColor}`}>
+          <Component size={20} />
         </div>
 
         <h3 className="truncate text-base font-semibold">
